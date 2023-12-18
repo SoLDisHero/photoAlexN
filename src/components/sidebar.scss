@@ -1,0 +1,219 @@
+.navbar{
+    width: 160px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    min-height: 500px;
+    .logo{
+        display: block;
+        padding: 8px 0;
+        img{
+            display: block;
+            margin: 8px auto;
+            width: 124px;
+            height: auto;
+        }
+    }
+    nav{
+        display: block;
+        text-align: center;
+        position: absolute;
+        height: 210px;
+        top: 50%;
+        margin-top: -120px;
+        width: 100%;
+        font-family: 'La Belle Aurore', cursive;
+        font-weight: 800;
+        a{
+            font-size: 22px;
+            color: #000000cc;
+            display: block;
+            line-height: 51px;
+            position: relative;
+            text-decoration: none;
+            svg{
+                transition: all 0.33s ease-out;
+            }
+            &:hover{
+                color: #000000cc;
+                svg{
+                    opacity:0;
+                }
+                &::after{
+                    opacity: 1;
+                }
+            }
+            &:after{
+                content: "";
+                font-size: 15px;
+                letter-spacing: 5px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.33s ease-out;
+            }
+            &:nth-child(2){
+                &::after{
+                    content: "HOME";
+                }
+            }
+            &:nth-child(3){
+                &::after{
+                    content: "ABOUT";
+                }
+            }
+            &:nth-child(4){
+                &::after{
+                    content: "CONTACT";
+                }
+            }
+        }
+        a.active{
+            svg{
+                color:#C4C4C0;
+            }
+        }
+    }
+    ul{
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-family: 'La Belle Aurore', cursive;
+        font-weight: 800;
+        li{
+            a{
+                font-size: 22px;
+                color: #000000cc;
+                display: block;
+                line-height: 55px;
+                position: relative;
+                text-decoration: none;
+                svg{
+                    transition: all 0.33s ease-out;
+                    height: 22px;
+                    width: 22px;
+                }
+                &:hover{
+                    svg{
+                        opacity:0;
+                    }
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+                &:after{
+                    content: "";
+                    font-size: 15px;
+                    letter-spacing: 5px;
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.33s ease-out;
+                }
+                
+            }
+            .social-facebook{
+                &::after{
+                    content: "FACEBOOK";
+                }
+            }
+            .social-mail{
+                &::after{
+                    content: "EMAIL ME";
+                }
+            }
+        }
+    }
+    .mobile-icon{
+        position: absolute;
+        right: 1.6rem;
+        top: 6%;
+        width: 1rem;
+        cursor: pointer;
+        display: none;
+        outline: none;
+        *{
+            pointer-events: none;
+        }
+    }
+    .mobile-icon-close{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+      width: 100%;
+        .hide-icon{
+            transform: translateX(-400px);
+        }
+        .logo {
+            img {
+            margin-left: 4%;
+            width: 200px;
+            }
+        }
+        .mobile-icon {
+            display: block;
+        }
+        nav, .navItems{
+        text-align: center;
+        top: 24%;
+        left: 0;
+        transition: 0.33s ease transform;
+            .mobile-icon-close{
+                display: block;
+                position: absolute;
+                top:-21%;
+                right: 4.6%;
+                cursor: pointer;
+                *{
+                    pointer-events: none;
+                }
+            }
+            a {
+                font-size: 18px;
+                svg {
+                    display: none;
+                }
+                &:hover{
+                    &::after{
+                        opacity: 0;
+                    }
+                }
+                &:nth-child(2):before {
+                    content: "HOME";
+                }
+        
+                &:nth-child(3):before {
+                    content: "ABOUT";
+                }
+        
+                &:nth-child(4):before {
+                    content: "CONTACT";
+                }
+            }
+        }
+        ul{
+            transition: 0.33s ease transform;
+            top: 27%;
+            display: flex;
+            justify-content: center;
+            li{
+                a{
+                    padding: 0 1.2rem;
+                }
+            }
+        }
+    }
+  }

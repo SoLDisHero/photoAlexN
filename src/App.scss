@@ -1,0 +1,19 @@
+$primary-color: #ffffff;
+
+@import "animate.css";
+
+$font-roman: 'Tinos', serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-la: 'La Belle Aurore', cursive;
+
+input,textarea{
+  font-family: var($font-la);
+}
+
+
+
+// font-family: 'La Belle Aurore', cursive;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Tinos', serif;
