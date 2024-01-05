@@ -23,13 +23,13 @@ function Sidebar() {
             onClick={() => setShowIcon(!showIcon)} role="button" onKeyDown={() => setShowIcon(!showIcon)}>
               <CloseIcon style={{opacity: showIcon ? "1" : "0", transform: `scale(${showIcon ? 1 : 0})`, transition: "opacity 0.2s ease-in-out, transform 0.9s ease-in-out"}} className={!showIcon ? "hide-icon" : ""}/>
             </div>
-            <NavLink exact="true" activeClassName="active" to="/">
+            <NavLink exact="true" to="/">
               <HomeIcon />
             </NavLink>
-            <NavLink exact="true" activeClassName="active" to="/work" className="work-link">
+            <NavLink exact="true" to="/collection" className="work-link">
               <PhotoCameraIcon/>
             </NavLink>
-            <NavLink exact="true" activeClassName="active" to="/contact" className="contact-link">
+            <NavLink exact="true" to="/contact" className="contact-link">
               <EmailIcon/>
             </NavLink>
           </nav>
