@@ -1,24 +1,37 @@
 .contact-page{
     .contact-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15% 0;
+        .contact-image{
+            width: 200px;
+            img{
+                object-fit: cover;
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);     
+            }
+        }
         .greeting{
-            position: absolute;
-            left: 45%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 35%;
+            width: 50%;
             vertical-align: middle;
             display: table-cell;
+            h2{
+                font-family:'Poppins', sans-serif;
+                font-weight: 100;
+                margin-bottom: 2rem;
+            }
+            p{
+                font-family:'Poppins', sans-serif;
+                margin-bottom: 2rem;
+            }
             .form{
                 width: 100%;
-                margin-top: 20px;
                 ul{
-                    padding: 0;
-                    margin: 0;
                     li{
-                        margin: 0;
-                        padding: 0;
                         list-style: none;
-                        margin-bottom: 10px;
+                        margin-bottom: 1rem;
                         overflow: hidden;
                         display: block;
                         position: relative;
@@ -35,36 +48,94 @@
                             margin-left: 0;
                         }
                     }
+                    li:nth-child(3){
+                        width: 100%;
+                    }
+                    input[type="text"], input[type="email"]{
+                        width: 100%;
+                        border: 1px solid #33353b;
+                        padding: 0.5rem;
+                        box-sizing: border-box;
+                        font-size: 1rem;
+                    }
+                    textarea{
+                        width: 100%;
+                        min-height: 100px;
+                        border-color: #33353b;
+                        padding: 0.5rem;
+                        box-sizing: border-box;
+                        font-size: 1.03rem;
+                    }
+                    .button{
+                        background-color: #33353b;
+                        color: #ffffff;
+                        letter-spacing: 5px;
+                        padding: 0.6rem 1.7rem;
+                        font-size: 1rem;
+                        border: none;
+                        float: right;
+                        cursor: pointer;
+                    }
                 }
-                input[type="text"], input[type="email"]{
-                    width: 100%;;
-                    border: 0;
-                    background-color: wheat;
-                    font-size: 16px;
-                    color: black;
-                    padding: 0 20px;
-                    box-sizing: border-box;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1100px){
+    .contact-page{
+        .contact-content{
+            padding: 2% 0;
+            flex-direction: column;
+            .contact-image{
+                width: 130px;
+                img{
+                    margin-top: 2rem;
                 }
-                textarea{
-                    width: 100%;
-                    border:0;
-                    height: 50px;
-                    font-size: 16px;
-                    background-color: wheat;
-                    color: #000;
-                    padding: 20px;
-                    min-height: 150px;
-                    box-sizing: border-box;
+            }
+            .greeting{
+                h2{
+                    text-align: center;
+                    margin: 1rem 0;
                 }
-                .button{
-                    color: wheat;
-                    background-color: #000;
-                    letter-spacing: 3px;
-                    text-decoration: none;
-                    padding: 8px 10px;
-                    font-size: 16px;
-                    border: 1px solid black;
-                    border-radius: 4px;
+                p{
+                    text-align: justify;
+                }
+                .form{
+                    ul{
+                        .button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .contact-page{
+        .contact-content{
+            padding: 2% 0;
+            flex-direction: column;
+            .contact-image{
+                width: 130px;
+                img{
+                    margin-top: 6.5rem;
+                }
+            }
+            .greeting{
+                h2{
+                    text-align: center;
+                    margin: 1rem 0;
+                }
+                p{
+                    text-align: justify;
+                }
+                .form{
+                    ul{
+                        .button{
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }

@@ -2,12 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import './home.scss';
 import 'animate.css';
-//for slides
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-//gor picture gallery
+//for picture gallery
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/scss/lightgallery.scss';
 import 'lightgallery/scss/lg-zoom.scss';
