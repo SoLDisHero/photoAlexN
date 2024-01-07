@@ -139,7 +139,6 @@
         position: absolute;
         right: 50px;
         top: 50px;
-        width: 1rem;
         cursor: pointer;
         display: none;
         outline: none;
@@ -167,6 +166,10 @@
         }
         .mobile-icon {
             display: block;
+            svg{
+                width: 2.3rem;
+                height: 2.3rem;
+            }
         }
         .navItems{
             margin-top: 80px;
@@ -181,8 +184,12 @@
                 display: block;
                 position: absolute;
                 top:-55px;
-                right: 43px;
+                right: 50px;
                 z-index: 1;
+                svg{
+                    width: 2.3rem;
+                    height: 2.3rem;
+                }
                 cursor: pointer;
                 *{
                     pointer-events: none;
@@ -213,13 +220,13 @@
         }
         ul{
             transition: 0.33s ease transform;
-            top: 27%;
+            top: 33%;
             display: flex;
             justify-content: center;
-            margin-top: 17rem;
+            margin-top: 19rem;
             li{
                 a{
-                    padding: 0 1.2rem;
+                    padding: 0 3.2rem;
                 }
             }
         }

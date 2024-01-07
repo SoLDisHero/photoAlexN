@@ -15,9 +15,9 @@ function Sidebar() {
 
   return (
     <div  className="navbar">
-        <Link to="/" className="logo">
+        <div to="/" className="logo">
             <img src={LogoAN} alt="logoAlex"/>
-        </Link>
+        </div>
           <nav className={!showIcon ? "hide-icon navItems" : "navItems"}>
             <div className="mobile-icon-close" 
             onClick={() => setShowIcon(!showIcon)} role="button" onKeyDown={() => setShowIcon(!showIcon)}>
